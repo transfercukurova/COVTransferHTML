@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Gövde fontu */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Arka plan rengi */
+            color: black; /* Yazı rengi */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Sayfa yüksekliğini kapsar */
+        }
+        header {
+            background: rgba(53, 66, 74, 0.9); /* Yarı şeffaf arka plan */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+        }
+        h1 {
+            font-family: 'Lora', serif; /* Başlık fontu */
+            font-size: 36px; /* Başlık boyutu */
+            margin: 0;
+            color: #ffcc00; /* Başlık rengi */
+        }
+        nav {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Merkezle */
+        }
+        nav a {
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+            font-weight: bold; /* Kalın yazı */
+            transition: color 0.3s; /* Geçiş efekti */
+        }
+        nav a:hover {
+            color: #ffcc00; /* Hover'da başlık rengi */
+        }
+        .menu-toggle {
+            display: none;
+            background-color: #ffcc00; /* Buton rengi */
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+            border-radius: 5px; /* Köşe yuvarlama */
+        }
+        .nav-links {
+            display: none; /* Varsayılan olarak gizli */
+            width: 100%;
+        }
+        .nav-links.show {
+            display: block; /* Açıldığında göster */
+        }
+        .container {
+            flex: 1; /* İçerik alanının esnek olmasını sağlar */
+            max-width: 100%; /* Tam genişlikte olmasını sağlar */
+            margin: 0; /* Kenar boşluklarını kaldırır */
+            padding: 20px;
+            background-image: url('1000064303.jpg'); /* Arka plan resmi */
+            background-size: cover; /* Resmi kaplayacak şekilde ayarlayın */
+            background-position: center; /* Resmi ortalayın */
+            background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+            box-shadow: none; /* Gölgeyi kaldırır */
+            color: white; /* İçerik yazı rengi */
+            opacity: 0.9; /* Opaklık ayarı */
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(53, 66, 74, 0.9); /* Yarı şeffaf arka plan */
+            width: 100%;
+            font-weight: bold; /* Kalın yazı */
+            color: white; /* Yazı rengi */
+        }
+
+        /* Mobil uyumlu stil */
+        @media (max-width: 600px) {
+            .menu-toggle {
+                display: block; /* Mobilde butonu göster */
+            }
+            nav {
+                display: none; /* Varsayılan olarak menüyü gizle */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Çukurova Transfer</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">Menüyü Göster/Gizle</button>
+    <nav class="nav-links">
+        <a href="#">Ana Sayfa</a>
+        <a href="#">Hakkında</a>
+        <a href="#">Hizmetler</a>
+        <a href="#">İletişim</a>
+        <a href="#">Blog</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- İçerik buraya eklenecek -->
+</div>
+
+<footer>
+    <p>&copy; 2024 Tüm Hakları Saklıdır</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
